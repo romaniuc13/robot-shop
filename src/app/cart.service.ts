@@ -5,13 +5,12 @@ import { IProduct } from './catalog/product.model';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: IProduct[] = [];
+  cart: IProduct[] = [];
 
   constructor() {}
 
   add(product: IProduct) {
     this.cart.push(product);
-
-    console.log('added ' + product.name + ' to cart!');
+    console.log(`product ${product.name} added to cart`);
   }
 }
